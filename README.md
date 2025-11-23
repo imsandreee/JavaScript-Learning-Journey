@@ -36,3 +36,55 @@ This repo contains all my progress, projects, and practice files while following
 ---
 
 ## 📂 Repository Structure  
+
+/month1
+/week1
+/week2
+/week3
+/week4
+
+/month2
+/week5
+/week6
+/week7
+/week8
+
+/month3
+/week9
+/week10
+/week11
+/week12
+
+
+---
+
+## ⭐ Featured Projects
+- Mini JS Apps  
+- API Projects  
+- Full Website  
+- JavaScript Capstone Project  
+
+---
+
+## 🛠 Tech Used
+- JavaScript  
+- HTML & CSS  
+- Git & GitHub  
+- APIs  
+- VS Code  
+
+---
+
+## 📥 How to Run
+1. Clone this repository  
+2. Open the folder in VS Code  
+3. Open `index.html` using Live Server or browser  
+
+---
+
+## 📌 Author
+**Sandree**  
+Beginner JavaScript Developer  
+Building projects daily 🚀
+
+---

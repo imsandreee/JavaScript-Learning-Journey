@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1 id="title">Hello World</h1>
+    <button id="btn" onclick="changeText()">Change Text</button>
+
+    <button id="colorBtn" onclick="changeColor()">Change Color</button>
+
+    <p id="message">
+    This is a hidden message.
+</p>
+
+<button id="toggleBtn" onclick="showHideParagraph()">
+    Show/Hide
+</button>
+</body>
+
+<script>
+
+const changeText = () => {
+    const title = document.getElementById('title')
+
+    title.innerHTML = 'Welcome to JavaScript DOM'
+}
+
+const changeColor = () => {
+    const body = document.getElementById('body')
+
+    body.style.backgroundColor = 'green'
+}
+
+const showHideParagraph = () => {
+    const paragraph = document.getElementById('message')
+
+
+    if (paragraph.style.display === 'none') {
+        paragraph.style.display = 'block'
+    } else {
+        paragraph.style.display = 'none'
+    }
+}
+</script>
+</html>

@@ -203,7 +203,22 @@ console.log(index);
 console.log(countries[index].toUpperCase())
 
 
-let mid = countries.length/2;
+let mid = Math.round(countries.length/2);
 
-console.log(mid)
-console.log(countries[Math.round(mid)])
+let first = countries.splice(0, mid);
+let second = countries;
+
+
+
+if (first.length !== second.length) {
+   first.pop();
+}
+
+console.log(first);
+console.log(second);
+
+let n1 = first.length;
+let n2 = second.length;
+
+
+console.log(`${n1} ${n2}`); 

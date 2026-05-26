@@ -65,9 +65,9 @@ const mernStack = ['MongoDB', 'Express', 'React', 'Node']
 
 //Iterate 0 to n using for loop
 
-for (let i = 0; i < n; i++) {
-    console.log(i);
-}
+// for (let i = 0; i < n; i++) {
+//     console.log(i);
+// }
 
 // Write a loop that makes the following pattern using console.log():
 
@@ -79,6 +79,52 @@ for (let i = 0; i < n; i++) {
 //     ######
 //     #######
 
-for (let i = 0; i < 7 ; i++) {
-    console.log(i * '#');
+
+// let pattern = ""
+// for (let i = 0; i < 7 ; i++) {
+//     pattern += "#"
+//     console.log(pattern);
+// }
+
+// for (let i = 0; i < 11; i++) {
+//     console.log(`${i} x ${i} = ${i * i} `);
+// }
+
+// for (let i = 0; i < 11; i++) {
+//     console.log(`${i} ${i**2} ${i**3} `);
+// }
+
+let sum = 0;
+
+for (let i = 0; i <= 100; i++) {
+  sum += i;
 }
+
+console.log(sum); // Output: 5050
+
+let sumEven = 0;
+let sumOdd = 0;
+
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+  sumEven += i;
+
+
+  }
+
+
+}
+
+      console.log(`The sum of all evens from 0 to 100 is${sumEven}`);
+
+
+for (let i = 1; i <= 100; i += 2) {
+  sumOdd += i;
+
+}
+    console.log(`The sum of all odds from 0 to 100 is${sumOdd}`);
+
+
+let sumofall = sumEven + sumOdd; 
+
+console.log(sumofall)

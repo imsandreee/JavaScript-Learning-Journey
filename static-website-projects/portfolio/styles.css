@@ -12,11 +12,13 @@ body {
 }
 
 header > nav{
-    background-color: #080616;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
 }
 
 nav ul{
@@ -45,7 +47,7 @@ li {
 
 
 #hero {
-    height: 600px;    
+    height: 100vh;    
     background: linear-gradient(#1A1953, #2F2FE4);
     filter: blur(100%);
     display: flex;
@@ -73,16 +75,17 @@ li {
     bottom: 70px;
 }
 
-.description button{
+.description input[type=submit]{
     font-family: "Poppins", sans-serif;
     position: relative;
     bottom: 70px;
     padding: 10px 30px;
     border-radius: 15px;
-    box-shadow: 0px 0px 3px black;
-    background-color: #080616;
+    box-shadow: 0px 0px 10px #2F2FE4;
+    background-color: #2F2FE4;
     color: whitesmoke;
     font-size: 14px;
+    border: none;
 }
 
 #hero .testimage {
@@ -104,7 +107,8 @@ li {
     color: #EEEEEE;
     font-family: "Poppins" , sans-serif;
     flex-wrap: wrap;
-  
+    height: auto;
+    
 }
 
 h2 {
@@ -115,11 +119,19 @@ h2 {
 }   
 
 .about-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 30px
 }
 
+@media screen and (max-width: 600px) {
+  .about-container {
+    /* Fixed the syntax here */
+    grid-template-columns: 1fr; 
+  }
+}
 .profile {
     width: 300px;
     height: 300px;
@@ -131,10 +143,19 @@ h2 {
 
 .about-me {
     display: block;
-    box-shadow: 0px 0px 5px #2F2FE4;
+    box-shadow: 0px 0px 20px #2F2FE4;
     padding: 20px;
     border-radius: 20px;
+    margin: 0;
 }
+
+.about-me:hover {
+    background-color: #2F2FE4;
+    transform: translateY(-20px);
+    transition: 500ms ;
+    transition-timing-function: ease-in-out ;
+}   
+
 
 #skills {
     color: #EEEEEE;
@@ -174,6 +195,7 @@ h2 {
     transform: scale(1.1);
     transition: 300ms;
     box-shadow: 0px 0px 10px black;
+    transition-timing-function: ease-in-out ;
 
 }
 
@@ -224,7 +246,9 @@ h2 {
 .project-cards:hover {
     transform: scale(1.1);
     margin: 0 20px;
-    transition: 300ms ease;
+    transition: 300ms;
+    transition-timing-function: ease-in-out ;
+
 }
 
 .project-cards h3{

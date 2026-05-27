@@ -173,3 +173,184 @@ let items = [1,2,3,4];
 
 
 
+// Exercise 2: Count Vowels
+
+// Create a function named countVowels that:
+
+// accepts a string
+// counts how many vowels are inside the string
+// returns the total number of vowels
+
+// function countVowels(word) {
+//     let vowels = ['a', 'e', 'i', 'o', 'u'];
+//     let numberOfVowels = 0;
+
+//     for (let i = 0; i < word.length; i++) {
+//         if (vowels.includes(word[i].toLowerCase())) {
+//             numberOfVowels++;
+//         }
+//     }
+
+//     return numberOfVowels;
+// }
+
+// console.log(countVowels("hello"));
+
+// Exercise 3: Temperature Converter
+
+// Create a function named celsiusToFahrenheit that:
+
+// accepts a Celsius value
+// converts it to Fahrenheit
+
+// Formula:
+
+function celsiusToFahrenheit(celsius) {
+    let formula = 9/5 * celsius + 32 
+    return formula;
+}
+
+
+
+console.log(celsiusToFahrenheit(123))
+
+
+// Exercise 4: Password Checker
+
+// Create a function named checkPassword that:
+
+// accepts a password
+// returns "Strong Password" if the password length is 8 or more
+// otherwise returns "Weak Password"
+
+// function checkPassword(password) {
+//     let passwordLength = password.length;
+
+//     if (passwordLength > 8) {
+//        return "Strong Password";
+//     } else {
+//       return  "Weak Password";
+//     }
+
+    
+// }
+
+// console.log(checkPassword("sandreemalakiano"))
+
+
+// Exercise 4: Simple Calculator
+
+// Create a function named calculator that:
+
+// accepts num1, operator, and num2
+// supports:
+// +
+// -
+// *
+// /
+// returns the result
+
+// Example:
+
+// calculator(10, "+", 5);
+
+// Output:
+
+// 15
+
+
+// function Calculator(num , operator, num2) {
+    
+//   let result;
+
+//   switch (operator) {
+//       case '+' :
+//       result =  num + num2
+//         break;
+//       case '-' :
+//        result =  num - num2
+//         break;
+//       case '*' :
+//       result =   num - num2
+//         break;
+//       case '/' :
+//       result =   num / num2
+      
+//         break;
+//     }
+
+//     return result;
+// }
+
+// console.log(Calculator(10, "-", 5));
+
+// Exercise 2: Find the Longest Word
+
+// Create a function named findLongestWord that:
+
+// accepts a sentence
+// returns the longest word
+
+
+// function findLongestWord(sentence) {
+//     let split = sentence.split(" ")
+//     let long = "";
+
+//     for (let i = 0 ; i < split.length; i++) {
+//         if (split[i].length > long.length) {
+//           long = split[i];
+//         }
+//     }
+//     return long;
+// }
+
+// console.log(findLongestWord("si benedict ay bading"))
+
+// Level 3 – Advanced Beginner Functions
+// Exercise 1: Array Sum
+
+// Create a function named sumArray that:
+
+// accepts an array of numbers
+// returns the total sum of all numbers
+
+// Example:
+
+// sumArray([1, 2, 3, 4]);
+
+// Output:
+
+// 10
+
+// function sumArray(numbers) {
+//   let sum = 0;
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+
+//   return sum;
+// }
+
+// console.log(sumArray([1, 2, 3, 4]))
+
+
+// 5. Find Smallest Number
+
+// Create a function findSmallest that:
+
+// takes an array
+// returns the smallest number
+
+// function findSmallest(array) {
+//     let small = array[0];
+
+//     for (let i = 0; i < array.length; i++) {
+//       if (array[i] < small) {
+//         small = array[i];
+//       }
+//     }
+//     return small;
+// }   
+
+// console.log(findSmallest([23, 2, 3, 4]))

@@ -354,3 +354,119 @@ console.log(celsiusToFahrenheit(123))
 // }   
 
 // console.log(findSmallest([23, 2, 3, 4]))
+
+// Declare a function fullName and it print out your full name.
+// Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.
+
+
+function fullName(firstName, lastName) {
+
+  return firstName + lastName;
+}
+
+
+console.log(fullName('Sandree' , ' Antang'))
+
+// Declare a function addNumbers and it takes two two parameters and it returns sum.
+
+function addNumbers(n1,n2) {
+  return n1 + n2;
+}
+
+console.log(addNumbers(5,5))
+
+
+// Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+
+let siblings = ['anna', 'mark', 'john'];
+
+function capitalizeArray(arr) {
+    let capitalized = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        capitalized.push(arr[i].toUpperCase());
+    }
+
+    return capitalized;
+}
+
+console.log(capitalizeArray(siblings));
+
+
+// // Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+
+// let item = ['food', 'services']
+
+// function addItem(arr) {
+//     let add = []
+
+//     for (let i = 0; i < arr.length; i++) {
+//      add.push(arr[i]);
+//     }
+
+//     return add;
+// }
+
+// console.log(addItem(['tite']))
+
+
+// Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+
+let item = ['food', 'services']
+
+function removeItem(array){
+     let remove =  array.pop();
+
+      return array;
+}
+
+console.log(removeItem(item))
+
+
+//Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+
+let numbers = [1,2,3,4,5,6]
+
+// function sumOfNumbers(number) {
+//     let sum = 0;
+
+//     for (let i = 0; i < number.length; i ++) {
+//       sum += number[i] ;
+//     }
+
+//     return sum;
+
+// }
+
+// console.log(sumOfNumbers(numbers))
+
+//Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+
+function sumOfOdds(number) {
+    let sum = 0;
+
+    for (let i = 0; i < number.length; i++) {
+      if (number[i] % 2 !== 0) {
+        sum += number[i] ;
+      }
+    }
+    
+    return sum;
+}
+
+console.log(sumOfOdds(numbers))
+
+
+function sumOfEvens(number) {
+    let sum = 0;
+
+    for (let i = 0; i < number.length; i++) {
+      if (number[i] % 2 === 0) {
+        sum += number[i] ;
+      }
+    }
+    
+    return sum;
+}
+
+console.log(sumOfEvens(numbers))

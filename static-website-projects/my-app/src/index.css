@@ -11,14 +11,21 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
 header > nav{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.774);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     position: fixed;
-    width: 100%;
+    width: 70%;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #0e0e29;
 }
 
 nav ul{
@@ -43,7 +50,6 @@ li {
     list-style: none;
 
 }
-
 
 
 #hero {
@@ -86,6 +92,18 @@ li {
     color: whitesmoke;
     font-size: 14px;
     border: none;
+}
+
+.description input[type=submit]:hover{
+  box-shadow: 0px 0px 10px #4343f5;
+  background-color: #4343f5;
+    
+}
+
+.description input[type=submit]:focus{
+  box-shadow: 0px 0px 10px #6161ee;
+  background-color: #6161ee;
+    
 }
 
 #hero .testimage {
@@ -140,6 +158,8 @@ h2 {
     border: 2px solid black;
     border-radius: 20px
 }
+
+
 
 .about-me {
     display: block;

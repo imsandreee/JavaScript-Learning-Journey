@@ -70,6 +70,7 @@ const signUp = function(username, email, password) {
   }
 
 signUp('imsandreee', 'antang.sandree.lebico@gmail.com','1234')
+console.log(users)
 // b. Create a function called signIn which allows user to sign in to the application
 function signIn(username, password){
     for(const user of users) {
@@ -82,6 +83,8 @@ function signIn(username, password){
 
             console.log('Wrong User or Password')
 }
+
+
 
 console.log(signIn('Brook','123111'))
 
@@ -165,3 +168,4 @@ function  averageRating(prd) {
 }
 
 console.log(averageRating('TV'))
+

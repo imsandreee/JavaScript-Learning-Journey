@@ -1,0 +1,88 @@
+    body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN CONTAINER */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* TITLE */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* FORM CARD STYLE */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* INPUTS */
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4a90e2;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #357bd8;
+}
+
+/* TABLE */
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 60%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* HEADER */
+thead {
+  background: #4a90e2;
+  color: white;
+}
+
+/* CELLS */
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* ROW HOVER */
+tr:hover {
+  background: #f1f7ff;
+}

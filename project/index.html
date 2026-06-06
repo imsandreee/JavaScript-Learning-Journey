@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD LocalStorage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <h2>CRUD with LocalStorage</h2>
+
+  <form id="userForm">
+    <input type="hidden" id="userId">
+
+    <label>Name:</label>
+    <input type="text" id="name" required>
+
+    <label>Age:</label>
+    <input type="number" id="age" required>
+
+    <button type="submit">Save</button>
+  </form>
+
+  <table border="1" cellpadding="10">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+
+    <tbody id="userTable"></tbody>
+  </table>
+</main>
+
+<script>
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+// CREATE + UPDATE
+document.getElementById("userForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const id = document.getElementById("userId").value;
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+
+  if (id === "") {
+    // CREATE
+    const user = {
+      id: Date.now(),
+      name,
+      age
+    };
+    users.push(user);
+  } else {
+    // UPDATE
+    users = users.map(user =>
+      user.id == id ? { ...user, name, age } : user
+    );
+  }
+
+  localStorage.setItem("users", JSON.stringify(users));
+
+  this.reset();
+  renderUsers();
+});
+
+// READ
+function renderUsers() {
+  const table = document.getElementById("userTable");
+  table.innerHTML = "";
+
+  users.forEach(user => {
+    table.innerHTML += `
+      <tr>
+        <td>${user.id}</td>
+        <td>${user.name}</td>
+        <td>${user.age}</td>
+        <td>
+          <button onclick="editUser(${user.id})">Edit</button>
+          <button onclick="deleteUser(${user.id})">Delete</button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+// EDIT
+function editUser(id) {
+  const user = users.find(u => u.id === id);
+
+  document.getElementById("userId").value = user.id;
+  document.getElementById("name").value = user.name;
+  document.getElementById("age").value = user.age;
+}
+
+// DELETE
+function deleteUser(id) {
+  users = users.filter(u => u.id !== id);
+  localStorage.setItem("users", JSON.stringify(users));
+  renderUsers();
+}
+
+// INIT
+renderUsers();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, p, .buttons {
+    text-align: center;
+}
+
+h1 {
+    color: orange;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 30px;
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border: none; 
+    box-shadow: 0px 0px 10px orange;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(255, 200, 98);
+    box-shadow: 0px 0px 10px rgb(255, 200, 98);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Remove default bullet points and padding */
+#countries {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    font-family: sans-serif;
+}
+
+/* Align list items in a neat horizontal grid row */
+#countries li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 15px;
+}
+
+/* Set fixed widths for text areas so everything lines up evenly */
+.item-name {
+    width: 25%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.item-value {
+    width: 20%;
+    text-align: right;
+    font-size: 14px;
+}
+
+/* The grey background track for the progress bar */
+.bar-container {
+    flex-grow: 1; /* Takes up all available middle space */
+    background-color: #e0e0e0;
+    height: 25px;
+    border-radius: 4px;
+    overflow: hidden; /* Keeps the inner color from spilling out */
+}
+
+/* Common bar styles */
+.bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.4s ease; /* Adds a smooth growing animation */
+}
+
+/* Orange color color for population bars */
+.population-bar {
+    background-color: #f2a93b;
+}
+
+/* Blue color color for language bars */
+.language-bar {
+    background-color: #5186ed;
+}
